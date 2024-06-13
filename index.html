@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessibility</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="contact-app__navbar" aria-label="Main Navigation">
+
+            <img class="navbar__logo" src="https://openqube.io/wp-content/uploads/2015/06/Short-Original-501x330.png"
+                alt="logo-globant">
+
+            <ul class="navbar__options" role="menuOptions">
+
+                <li class="navbar__options__option " id="optionOne" role="option">
+                    <a href="#" aria-label="Overview page"> Overview </a>
+                </li>
+
+                <li class="navbar__options__option navbar__options__option--selected" id="optionTwo" role="option">
+                    <a href="#" aria-label="Contacts"> Contacts </a>
+                </li>
+
+                <li class="navbar__options__option" id="optionThree" role="option">
+                    <a href="#" aria-label="Favorites"> Favorites </a>
+                </li>
+
+                <li class="navbar__options__option" id="optionFour" role="option">
+                    <button class="option__button" id="buttonOptionNew" role="optionBottom" aria-haspopup="true"
+                        aria-expanded="false" aria-controls="new-menu">
+                        <img class="option__button__img" src="./assets/img/0e3f6c94-3b01-4631-856a-4b2ea2f6e109.png"
+                            alt="" srcset="">
+                        <p>New</p>
+                    </button>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Formulario -->
+        <section class="new-contact-form" aria-labelledby="form-section">
+
+            <div class="new-contact-form__container">
+
+                <form class="new-contact-form__container__form" aria-describedby="form-description">
+                    <input 
+                        class="new-contact-form__container__form__input"
+                        type="text" 
+                        name="first-name" 
+                        id="fist-name" 
+                        aria-required="true" 
+                        placeholder="First name"
+                    />
+                    <input
+                        class="new-contact-form__container__form__input"
+                        type="text" 
+                        name="last-name" 
+                        id="last-name" 
+                        aria-required="true" 
+                        placeholder="Last name" 
+                    />
+                    <input
+                        class="new-contact-form__container__form__input"
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        aria-required="true"
+                        placeholder="Email"
+                    />
+                    <div class="new-contact-form__content-favorites">
+                        <p>Enable like favorite</p>
+                        <input
+                            class="new-contact-form__container__form__input"
+                            type="checkbox" 
+                            name="enable_favorite" 
+                            id="enable_favorite" 
+                        />
+
+                    </div>
+
+                    <button class="new-contact-form__container__form__botton" type="submit">Save</button>
+                </form>
+
+            </div>
+
+
+        </section>
+    </main>
+</body>
+
+</html>
